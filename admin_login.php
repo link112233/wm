@@ -15,32 +15,29 @@
 <body>
 <div class="container">
 	<div class="row login_box">
+		<div class="login_message">
 	    <div class="col-md-12 col-xs-12" align="center">
-            <div class="line"><h3><?php echo date("d-m-Y"); ?></h3></div>
-            <div class="outter"><img src="images/loginlogored.png" class="image-circle"/></div>
-            <h1>Hallo!</h1>
-            <span>Login op je account</span>
+        <div class="outter"><img src="images/loginlogored.png" class="image-circle"/></div>
+        	<h1>Hallo!</h1>
+          <span>Login op je account</span>
 	    </div>
-
-        <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
-        <div class="col-md-12 col-xs-12 login_control">
-                <div class="control">
-                    <div class="label">E-mailadres</div>
-                    <input type="text" class="form-control" name="email" id="email">
-                </div>
-
-                <div class="control">
-                     <div class="label">h</div>
-                    <input type="password" class="form-control" name="password" id="password">
-                </div>
-                <div align="center">
-                     <input type="submit" name="submit" id="submit" class="btn btn-orange" value="Login">
-               <?php if(isset($_POST['submit'])){include 'functions/general_functions.php'; login($con,$_POST['email'], $_POST['password']);} ?>
-
-                </div>
-		</div>
-		</form>
+<form method="post" action="php/login.php">
+  <div class="col-md-12 col-xs-12 login_control">
+    <div class="control">
+      <div class="label">E-mailadres</div>
+        <input type="text" class="form-control" name="email" id="email">
     </div>
+    <div class="control">
+      <div class="label">Wachtwoord</div>
+        <input type="password" class="form-control" name="password" id="password">
+    </div>
+    <div align="center">
+      <input type="submit" name="submit" id="submit" class="btn btn-orange" value="Login">
+    </div>
+	</div>
+</form>
+		</div>
+	</div>
 </div>
 </body>
 </html>
