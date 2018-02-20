@@ -20,6 +20,3 @@ ExpiresByType application/x-shockwave-flash "access plus 1 week"
 ExpiresByType image/x-icon "access plus 1 week"
 ExpiresDefault "access plus 2 days"
 </IfModule>
-
-#Alternate default index page
-DirectoryIndex index.php/schildersbedrijf-klaas-jan-miedema
