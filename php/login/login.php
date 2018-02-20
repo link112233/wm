@@ -10,14 +10,12 @@ ini_set('display_errors', 1);
 	$password = strip_tags(trim(mysqli_real_escape_string($con,$_POST['password'])));
 	$salt = '%fgh^^7$#$$';
 	$password = hash('sha512',$salt.$password);
-	$date = date("d-m-Y H:i:s");
 
 	if(empty($username) || empty($password))
 	{
 	echo "Inloggegevens onjuist";
 	return false;
 	}
-
 
 	$query = "SELECT username,password FROM `users` WHERE username='$username' AND password='$password' LIMIT 1";
 	$result = mysqli_query($con,$query);
@@ -28,7 +26,7 @@ ini_set('display_errors', 1);
 	session_start();
 	$_SESSION['username'] = $_POST['email'];
 	$_SESSION['login_time'] = time();
-	header('Location:admin-dashboard');
+	header('Location:../../admin-dashboard');
 	}// end if count == 1
 
 	else
