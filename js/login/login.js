@@ -1,14 +1,17 @@
+
+
 $(document).ready(function(){
  $("#add_err").css('display', 'none', 'important');
+ $("#add_err").css('color', 'red', 'important');
  $("#submit_login").click(function(){
-   username=$("#email").val();
-   password=$("#password").val();
+   var username=$("#email").val();
+   var password=$("#password").val();
    $.ajax({
     type: "POST",
     url: "php/login/login.php",
  data: "username="+username+"&password="+password,
     success: function(html){
- if(html=='true')    {
+ if(html==true)    {
  $("#add_err").html("right username or password");
  window.location="admin-dashboard";
  }
