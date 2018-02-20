@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="control">
-                     <div class="label">Wachtwoord</div>
+                     <div class="label">h</div>
                     <input type="password" class="form-control" name="password" id="password">
                 </div>
                 <div align="center">
