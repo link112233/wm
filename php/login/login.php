@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 
 	if(isset($_POST['submit_login']))
 	{
-	$username = strip_tags(trim(mysqli_real_escape_string($con,$_POST['email'])));
+	$username = strip_tags(trim(mysqli_real_escape_string($con,$_POST['username'])));
 	$password = strip_tags(trim(mysqli_real_escape_string($con,$_POST['password'])));
 	$salt = '%fgh^^7$#$$';
 	$password = hash('sha512',$salt.$password);
@@ -21,14 +21,13 @@ ini_set('display_errors', 1);
 	$result = mysqli_query($con,$query);
 	$count_rows = mysqli_num_rows($result);
 
-	if($count_rows ==1)
+	if($count_rows ===1)
 	{
 	session_start();
-	$_SESSION['username'] = $_POST['email'];
+	$_SESSION['username'] = $_POST['username'];
 	$_SESSION['login_time'] = time();
-	header('Location:../../admin-dashboard');
+	header('Location:admin-dashboard');
 	}// end if count == 1
-
 	else
 	{
 	echo 'Inloggegevens onjuist';

@@ -20,11 +20,11 @@
         	<h1>Hallo!</h1>
           <span>Login op je account</span>
 	    </div>
-<form method="post" action="php/login/login.php">
+<form method="post" action="php/login/login.php" id="login_form">
   <div class="col-md-12 col-xs-12 login_control">
     <div class="control">
       <div class="label">E-mailadres</div>
-        <input type="text" class="form-control" name="email" id="email">
+        <input type="text" class="form-control" name="username" id="username">
     </div>
     <div class="control">
       <div class="label">Wachtwoord</div>
@@ -33,7 +33,6 @@
     <div align="center">
       <input type="submit" name="submit_login" id="submit_login" class="btn btn-orange" value="Login">
     </div>
-		<div id="add_err"></div>
 	</div>
 </form>
 		</div>
