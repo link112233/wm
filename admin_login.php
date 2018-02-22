@@ -32,6 +32,7 @@
     </div>
     <div align="center">
       <input type="submit" name="submit_login" id="submit_login" class="btn btn-orange" value="Login">
+			<div id="loader1" style="display:none;"><img src="images/loader.gif"/></div>
     </div>
 	</div>
 </form>

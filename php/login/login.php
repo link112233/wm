@@ -30,6 +30,7 @@ ini_set('display_errors', 1);
 	}// end if count == 1
 	else
 	{
+	header("Location: {$_SERVER['HTTP_REFERER']}");
 	echo 'Inloggegevens onjuist';
 	return false;
 	}//end else

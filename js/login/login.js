@@ -2,6 +2,10 @@
 $(document).ready(function(){
  $("#submit_login").click(function(){
 
+ $("#loader1").css("display","block");
+   //serialize
+   $("#login_form").serialize();
+
    //get data
    var username = $("#username").val();
    var password = $("#password").val();
@@ -13,18 +17,16 @@ $(document).ready(function(){
        url:"php/login/login.php",
        method:"POST",
        data:{username:username, password:password},
+       timeout: 10000, // Recomended for most request
          success:function(data)
          {
-
-         }
-         else {
-           alert("Something went wrong brah");
-           return false;
+            window.location = 'admin-dashboard';
          }
      })
    }
    else {
-     alert('empty');
+     alert('Onjuiste gegevens');
+     $("#loader1").css("display","none");
      return false;
    }
  });
