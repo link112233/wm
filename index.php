@@ -11,7 +11,6 @@ if(isset($_GET['page']))
 		case "admin-dashboard":
 		include 'inc/admin_dashboard.php';
 		break;
-
 	}
 }
 else

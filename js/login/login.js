@@ -17,7 +17,6 @@ $(document).ready(function(){
        url:"php/login/login.php",
        method:"POST",
        data:{username:username, password:password},
-       timeout: 10000, // Recomended for most request
          success:function(data)
          {
             window.location = 'admin-dashboard';
