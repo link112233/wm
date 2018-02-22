@@ -17,6 +17,10 @@ $(document).ready(function(){
          {
 
          }
+         else {
+           alert("Something went wrong brah");
+           return false;
+         }
      })
    }
    else {

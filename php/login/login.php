@@ -24,9 +24,9 @@ ini_set('display_errors', 1);
 	if($count_rows ===1)
 	{
 	session_start();
-	$_SESSION['username'] = $_POST['username'];
+	$_SESSION['logged_in'] = $_POST['username'];
 	$_SESSION['login_time'] = time();
-	header('Location:admin-dashboard');
+	header('Location:/wm/admin-dashboard');
 	}// end if count == 1
 	else
 	{

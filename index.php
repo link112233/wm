@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset( $_SESSION['username'] )|| time() - $_SESSION['login_time'] > 3000){
-header("Location: admin_login.php");
+if(!isset( $_SESSION['logged_in'] )|| time() - $_SESSION['login_time'] > 3000){
+header("Location: /wm/admin_login.php");
 return false;
 }// END SESSION AND TIME CHECK
 else
@@ -24,5 +24,5 @@ if(isset($_GET['page']))
 else
 {
 	include 'inc/admin_dashboard.php';
-  return false;
+  return true;
 }
