@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
 
 	if(empty($username) || empty($password))
 	{
-	echo "Inloggegevens onjuist";
+  header("Location: {$_SERVER['HTTP_REFERER']}");;
 	return false;
 	}
 
@@ -31,7 +31,7 @@ ini_set('display_errors', 1);
 	else
 	{
 	header("Location: {$_SERVER['HTTP_REFERER']}");
-	echo 'Inloggegevens onjuist';
-	return false;
 	}//end else
+
+	mysqli_close($con);
 }
